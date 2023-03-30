@@ -73,7 +73,7 @@ app.post('/new', (req: Request, res: Response) => {
 
 
 //  Delete a task
-app.delete('/delete/:id', (req: Request, res: Response) => {
+app.delete('/delete/:id', async(req: Request, res: Response) => {
     const pool = openDb()
 
     const id = parseInt(req.params.id)
